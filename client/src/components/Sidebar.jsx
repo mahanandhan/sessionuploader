@@ -47,6 +47,10 @@ const Sidebar = ({ isExpanded, setIsExpanded }) => {
           <span className="">📄</span>
           {isExpanded && <span className="ml-3">PDFs</span>}
         </a>
+        <a href="/videos" className={`flex items-center p-4 ${hoverStyle} transition-colors duration-200`}>
+        <span className="">📹</span>
+        {isExpanded && <span className="ml-3">Videos</span>}
+        </a>
         <a href="/settings" className={`flex items-center p-4 ${hoverStyle} transition-colors duration-200`}>
           <span className="text-base">⚙️</span>
           {isExpanded && <span className="ml-3">Settings</span>}

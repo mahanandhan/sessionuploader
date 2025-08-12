@@ -12,7 +12,7 @@ export const postData = async (req, res) => {
             videoImageUrl: videoImageUrl || 'https://www.freeiconspng.com/uploads/no-image-icon-4.png',
             description,
             pdfUrl,
-            pdfImageUrl: pdfImageUrl || 'https://example.com/default-pdf-image.jpg'
+            pdfImageUrl: pdfImageUrl || 'https://www.freeiconspng.com/uploads/no-image-icon-4.png'
         });
         await newData.save();
         res.json({ success: true, data: newData });

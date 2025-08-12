@@ -12,7 +12,7 @@ const Main = () => {
   const defaultVideoImage =
     "https://www.freeiconspng.com/uploads/no-image-icon-4.png";
   const defaultPdfImage =
-    "https://via.placeholder.com/300x200.png?text=PDF+Preview";
+    "https://www.freeiconspng.com/uploads/no-image-icon-4.png";
 
   // Fetch data from backend
   useEffect(() => {

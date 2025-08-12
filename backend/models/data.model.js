@@ -7,6 +7,7 @@ const DataSchema = new mongoose.Schema({
     },
     videoUrl: {
         type: String,
+        required: true
     },
     videoImageUrl: {
         type: String,
@@ -18,11 +19,11 @@ const DataSchema = new mongoose.Schema({
     },
     pdfUrl: {
         type: String,
+        required: true
     },
     pdfImageUrl: {
         type: String,
-        default: 'https://example.com/default-pdf-image.jpg', // replace with your default image
-        trim: true
+        default: 'https://example.com/default-pdf-image.jpg'
     }
 }, { timestamps: true });
 
