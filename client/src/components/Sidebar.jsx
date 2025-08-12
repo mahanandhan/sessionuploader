@@ -1,10 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaHome, FaInfoCircle, FaEnvelope, FaBars } from "react-icons/fa";
 
-const Sidebar = () => {
-  const [isExpanded, setIsExpanded] = useState(true);
-
-  // Professional color palette
+const Sidebar = ({ isExpanded, setIsExpanded }) => {
   const bgColor = "bg-gray-900";
   const hoverStyle = "hover:bg-gray-800";
 
@@ -14,18 +11,16 @@ const Sidebar = () => {
         isExpanded ? "w-64" : "w-16"
       } transition-all duration-300 border-r border-gray-800 shadow-lg`}
     >
-      {/* Logo / Brand */}
+      {/* Logo */}
       <div className="flex items-center justify-center w-full py-6 border-b border-gray-800">
         {isExpanded ? (
-          <h1 className="text-lg font-semibold tracking-tight">
-            Session Uploader
-          </h1>
+          <h1 className="text-lg font-semibold tracking-tight">Session Uploader</h1>
         ) : (
           <span className="text-xl font-bold mr-4">📁</span>
         )}
       </div>
 
-      {/* Menu toggle button */}
+      {/* Toggle button */}
       <button
         className={`p-4 w-full flex items-center ${hoverStyle} transition-all duration-200`}
         onClick={() => setIsExpanded(!isExpanded)}
@@ -36,47 +31,25 @@ const Sidebar = () => {
 
       {/* Navigation links */}
       <nav className="mt-2 w-full flex-1">
-        <a
-          href="/"
-          className={`flex items-center p-4 ${hoverStyle} transition-colors duration-200`}
-        >
+        <a href="/" className={`flex items-center p-4 ${hoverStyle} transition-colors duration-200`}>
           <FaHome className="text-base" />
           {isExpanded && <span className="ml-3">Home</span>}
         </a>
-
-        <a
-          href="/about"
-          className={`flex items-center p-4 ${hoverStyle} transition-colors duration-200`}
-        >
+        <a href="/about" className={`flex items-center p-4 ${hoverStyle} transition-colors duration-200`}>
           <FaInfoCircle className="text-base" />
           {isExpanded && <span className="ml-3">About</span>}
         </a>
-
-        <a
-          href="/contact"
-          className={`flex items-center p-4 ${hoverStyle} transition-colors duration-200`}
-        >
+        <a href="/contact" className={`flex items-center p-4 ${hoverStyle} transition-colors duration-200`}>
           <FaEnvelope className="text-base" />
           {isExpanded && <span className="ml-3">Contact</span>}
         </a>
-
-        {/* Divider */}
-        <div className="border-t border-gray-800 my-3"></div>
-
-        <a
-          href="/pdf"
-          className={`flex items-center p-4 ${hoverStyle} transition-colors duration-200`}
-        >
-          <span className="text-base">📄</span>
+        <a href="/pdf" className={`flex items-center p-4 ${hoverStyle} transition-colors duration-200`}>
+          <span className="">📄</span>
           {isExpanded && <span className="ml-3">PDFs</span>}
         </a>
-
-        <a
-          href="/videos"
-          className={`flex items-center p-4 ${hoverStyle} transition-colors duration-200`}
-        >
-          <span className="text-base">🎥</span>
-          {isExpanded && <span className="ml-3">Videos</span>}
+        <a href="/settings" className={`flex items-center p-4 ${hoverStyle} transition-colors duration-200`}>
+          <span className="text-base">⚙️</span>
+          {isExpanded && <span className="ml-3">Settings</span>}
         </a>
       </nav>
 

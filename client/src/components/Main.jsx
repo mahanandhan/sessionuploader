@@ -8,11 +8,21 @@ const videoClasses = [
   { id: 3, title: "Fullstack Integration", description: "Connect your React frontend to a backend API and manage data flow.", videoUrl: "https://www.example.com/video3" },
   { id: 4, title: "State Management with Redux", description: "Learn how to manage complex application state with Redux.", videoUrl: "https://www.example.com/video4" },
   { id: 5, title: "React Router Deep Dive", description: "Master navigation and routing in React applications.", videoUrl: "https://www.example.com/video5" },
-  { id: 6, title: "Optimizing Performance", description: "Techniques to make your React apps faster and more efficient.", videoUrl: "https://www.example.com/video6" }
+  
+  { id: 6, title: "Optimizing Performance", description: "Techniques to make your React apps faster and more efficient.", videoUrl: "https://www.example.com/video6" },
+  { id: 6, title: "Optimizing Performance", description: "Techniques to make your React apps faster and more efficient.", videoUrl: "https://www.example.com/video6" },
+  { id: 6, title: "Optimizing Performance", description: "Techniques to make your React apps faster and more efficient.", videoUrl: "https://www.example.com/video6" },
+  { id: 6, title: "Optimizing Performance", description: "Techniques to make your React apps faster and more efficient.", videoUrl: "https://www.example.com/video6" },
+  { id: 6, title: "Optimizing Performance", description: "Techniques to make your React apps faster and more efficient.", videoUrl: "https://www.example.com/video6" },
+  { id: 6, title: "Optimizing Performance", description: "Techniques to make your React apps faster and more efficient.", videoUrl: "https://www.example.com/video6" },
+  { id: 6, title: "Optimizing Performance", description: "Techniques to make your React apps faster and more efficient.", videoUrl: "https://www.example.com/video6" },
+  { id: 6, title: "Optimizing Performance", description: "Techniques to make your React apps faster and more efficient.", videoUrl: "https://www.example.com/video6" },
+  { id: 6, title: "Optimizing Performance", description: "Techniques to make your React apps faster and more efficient.", videoUrl: "https://www.example.com/video6" },
+  
 ];
 
 const Main = () => {
-  const [isSidebarOpen] = useState(true); // you can add toggle later
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-100 text-gray-900">
@@ -24,11 +34,8 @@ const Main = () => {
       {/* Sidebar + Main Content */}
       <div className="flex flex-1">
         {/* Sidebar */}
-        <div
-          className={`fixed h-screen bg-slate-900 text-white shadow-lg transition-all duration-300 
-          ${isSidebarOpen ? "w-64" : "w-16"}`}
-        >
-          <Sidebar />
+        <div className="fixed h-screen shadow-lg transition-all duration-300">
+          <Sidebar isExpanded={isSidebarOpen} setIsExpanded={setIsSidebarOpen} />
         </div>
 
         {/* Video Classes */}
@@ -69,4 +76,5 @@ const Main = () => {
     </div>
   );
 };
+
 export default Main;
