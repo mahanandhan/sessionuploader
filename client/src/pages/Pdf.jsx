@@ -9,7 +9,7 @@ const Pdf = () => {
   useEffect(() => {
     const fetchPdfs = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/data/get-data'); // Replace with your backend API endpoint
+        const res = await axios.get('https://sessionuploader.onrender.com/api/data/get-data'); // Replace with your backend API endpoint
         if (res.data.success) {
           // Filter only entries that have pdfUrl
           const filtered = res.data.data.filter(item => item.pdfUrl);

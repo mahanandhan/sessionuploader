@@ -9,7 +9,7 @@ const Get = () => {
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/data/get-data"); // Update with your API endpoint
+        const res = await axios.get("https://sessionuploader.onrender.com/api/data/get-data"); // Update with your API endpoint
         if (res.data.success) {
           setCourses(res.data.data);
         } else {

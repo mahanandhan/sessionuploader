@@ -18,7 +18,7 @@ const Main = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/data/get-data");
+        const res = await axios.get("https://sessionuploader.onrender.com/api/data/get-data");
         if (res.data.success) {
           setData(res.data.data);
         }

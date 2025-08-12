@@ -35,7 +35,7 @@ const Add = () => {
       setLoading(true);
       setMessage(null);
 
-      const response = await axios.post(' http://localhost:5000/api/data/upload', formData); // Replace '/api/data' with your backend URL if different
+      const response = await axios.post('https://sessionuploader.onrender.com/api/data/upload', formData); // Replace '/api/data' with your backend URL if different
 
       if (response.data.success) {
         setMessage('Session added successfully!');

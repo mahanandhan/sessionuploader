@@ -11,7 +11,7 @@ const Videos = () => {
   useEffect(() => {
     const fetchVideos = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/data/get-data'); // Replace with your backend endpoint
+        const res = await axios.get('https://sessionuploader.onrender.com/api/data/get-data'); // Replace with your backend endpoint
         if (res.data.success) {
           // Filter data items which have videoUrl defined
           const videoData = res.data.data.filter(item => item.videoUrl);
