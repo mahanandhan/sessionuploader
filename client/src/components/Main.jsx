@@ -164,8 +164,8 @@ const Main = () => {
                         </p>
                         <img
                           src={item.image}
-                          alt="PDF Thumbnail"
-                          className="w-full h-40 object-cover rounded mb-2"
+                          alt="PDF Thumbnail" 
+                          className="w-50 h-60 rounded mb-2 flex justify-center item-center"
                         />
                         <a
                           href={item.url}
