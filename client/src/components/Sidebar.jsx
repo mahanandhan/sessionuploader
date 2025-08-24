@@ -49,7 +49,7 @@ const Sidebar = ({ isExpanded, setIsExpanded }) => {
           { label: "About", icon: <FaInfoCircle />, href: "/about" },
           { label: "Contact", icon: <FaEnvelope />, href: "/contact" },
           { label: "PDFs", icon: "📄", href: "/pdf" },
-          { label: "Videos", icon: "📹", href: "/videos" },
+          // { label: "Videos", icon: "📹", href: "/videos" },
           { label: "Settings", icon: "⚙️", href: "/settings" },
         ].map(({ label, icon, href }) => (
           <a

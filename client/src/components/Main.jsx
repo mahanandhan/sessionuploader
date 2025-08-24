@@ -33,16 +33,16 @@ const Main = () => {
   }, []);
 
   // Separate videos and PDFs
-  const videoCards = data
-    .filter((item) => !!item.videoUrl)
-    .map((item) => ({
-      _id: item._id + "-video",
-      type: "video",
-      name: item.name,
-      description: item.description,
-      image: item.videoImageUrl || defaultVideoImage,
-      url: item.videoUrl,
-    }));
+  // const videoCards = data
+  //   .filter((item) => !!item.videoUrl)
+  //   .map((item) => ({
+  //     _id: item._id + "-video",
+  //     type: "video",
+  //     name: item.name,
+  //     description: item.description,
+  //     image: item.videoImageUrl || defaultVideoImage,
+  //     url: item.videoUrl,
+  //   }));
 
   const pdfCards = data
     .filter((item) => !!item.pdfUrl)
@@ -114,7 +114,7 @@ const Main = () => {
               {filter === "all" && (
                 <>
                   {/* Videos in All */}
-                  <h2 className="text-2xl font-semibold mb-6 border-b border-gray-300 pb-2">
+                  {/* <h2 className="text-2xl font-semibold mb-6 border-b border-gray-300 pb-2">
                     🎥 Video Classes
                   </h2>
                   <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-10">
@@ -144,7 +144,7 @@ const Main = () => {
                         </a>
                       </div>
                     ))}
-                  </div>
+                  </div> */}
 
                   {/* PDFs in All */}
                   <h2 className="text-2xl font-semibold mb-6 border-b border-gray-300 pb-2">
