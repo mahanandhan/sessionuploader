@@ -7,7 +7,6 @@ const DataSchema = new mongoose.Schema({
     },
     videoUrl: {
         type: String,
-        required: true
     },
     videoImageUrl: {
         type: String,
